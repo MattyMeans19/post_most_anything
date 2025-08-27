@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+.container{
+  @apply flex flex-col w-screen;
+}
+
 .sidebarOptions{
-  @apply text-2xl border-b-2 rounded-3xl border-gray-700/35 shadow-2xl shadow-black/45 w-full text-center hover:bg-gray-200 active:bg-gray-400; 
+  @apply text-2xl border-b-2 rounded-3xl border-gray-700/35 shadow-2xl shadow-black/45 w-full text-center hover:bg-gray-200 active:bg-gray-400 cursor-default; 
 }
