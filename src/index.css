@@ -22,3 +22,7 @@
 .title{
   @apply text-center text-6xl underline underline-offset-4 mb-5;
 }
+
+.primaryButton{
+  @apply border-2 text-3xl bg-fuchsia-300 rounded-3xl;
+}
