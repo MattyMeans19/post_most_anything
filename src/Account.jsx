@@ -14,7 +14,7 @@ function Account(){
             loggedin: false,
         }
     );
-    const [accountOpen, toggleOpen] = useState(true)
+    const [accountOpen, toggleOpen] = useState(false)
 
     function accountClicked(){
         toggleOpen(!accountOpen)
@@ -35,7 +35,7 @@ function Account(){
                 <div className="w-full h-full p-2 flex flex-col">
                     <h1 className={[`text-center text-2xl cursor-default ${user.color} rounded-2xl border-1 chewy-regular`]}>{user.userName}</h1>
                     <h2 className="text-center cursor-default">{user.fName} {user.lName}</h2>
-                    <button className="text-[0.75rem] active:text-blue-500 cursor-pointer">Settings ⚙️</button>
+                    <button className="text-[0.75rem] active:text-blue-500 cursor-pointer" onClick={() => (accountClicked())}>Settings ⚙️</button>
                 </div>
                 :
                 <button className="w-full h-full rounded-l-3xl text-4xl chewy-regular hover:bg-gray-400/40" onClick={() => (accountClicked())}>
@@ -56,7 +56,9 @@ function Account(){
                         colorSelect = {changeColor}
                         onExit = {accountClicked}
                     />:
-                    <Login />
+                    <Login 
+                        onExit= {accountClicked}
+                    />
                 }
             </div>
         </div>
